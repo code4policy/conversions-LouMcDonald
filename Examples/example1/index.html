@@ -30,7 +30,7 @@ button {
 </style>
 <button>Update</button>
 <script src="https://d3js.org/d3.v3.min.js"></script>
-<script src="bullet.js"></script>
+<script src="scripts/bullet.js"></script>
 <script>
 
 var margin = {top: 5, right: 40, bottom: 20, left: 120},
@@ -41,7 +41,7 @@ var chart = d3.bullet()
     .width(width)
     .height(height);
 
-d3.json("dummy.json", function(error, data) {
+d3.json("data/output.json", function(error, data) {
   if (error) throw error;
 
   var svg = d3.select("body").selectAll("svg")
